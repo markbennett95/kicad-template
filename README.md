@@ -1,28 +1,10 @@
-# Weather Man Overdrive
+# BCA Kicad Project Template
 
-KiCAD files for the Weather Man overdrive - our flagship overdrive pedal. Various versions of it can be viewed by pulling the right version number. Finalized version numbers are detailed below:
+This repository is a template for BCA kicad projects. It contains two folders for documentation & gerber files, a kicad project template, and a BOM template (inside the documentation folder). There are two PCB templates: one for a 125B enclosure, the other for 1590BB enclosures, as labelled. Both templates have an outline of the enclosure on their dwg.user layer, pre-defined jack locations, and a board outline. These may be modified as required. To create a new repository from this template, a couple steps are required:
 
-## v1.1.0-build
-Weather man mkI, revB PCB. 
- - Gain, volume, voice, and treble controls. More akin to the classic KoT or BB schematics. 
- - Suitable for use in 1590BB dual OD custom builds, or in a 1590B enclosure.
- - Uses legacy imperial 4-pot hole spacing, as in documentation on google drive. 
+ - Rename the appropriate files, replacing "kicad-template" (along with the enclosure type suffix) with the project name. This should be done **before** attempting to open either of the PCB files, as failing to do so will auto-generate an extra .pro file whose name matches the PCB file.
+ - Delete the unused PCB file.
 
-## v2.0.0-build
-Weather man mkII, rev A PCB - "Grant Version"
- - First pass of the WMII, has separate bass/treble controls, still has voice knob, and external clipping switch.
- - Designed for 125B/1590N
- - Uses custom layout, labelled Weather Man mkII revA Layout on google drive
+From there, a tag should be added to the git project every time a new PCB revision is made. From right to left, the three digit numbers should be incremented for every: minor schematic or component value revision, PCB revision with no changes to external controls, and PCB revision with changes to the external controls. A brief descriptor should be made for each new tag as shown below.
 
-## v2.1.0-build
-Weather man mkII, rev D PCB
- - Updated version of WMII from Nov 2019, voice switch and internal clipping switches
- - Designed for 125B/1590N
- - Uses legacy imperial 5 pot, 1 toggle, 2 footSW layout
-
-## v2.1.1-build
-Weather man mkII, first serialized PCB
- - Updated with presence control, board-mounted jacks, and connections for ribbon cables
- - Designed for 125B/1590N
- - Switched from 2N5458 JFET's to MMBFJ201 SMD JFETs - had no choice, stock is unavailable
- - Uses standard metric 5 pot, 1 toggle, 2 footSW layout, saved on tayda site
+## v1.0.0-build
